@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Submit Your Details</h1>
+        {% include "header.html" %}
+    </header>
+    <main>
+        <h2 style="text-align: center;">Contact Form</h2>
+        <form action="#" method="POST">
+            {% csrf_token %}
+            {{form}}
+            
+            {% comment %} <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{name}}" required placeholder="Enter your name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{email}}" required placeholder="Enter your email">
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" value="{{subject}}" required placeholder="Enter the subject">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="2" value="{{message}}" required placeholder="Enter your message"></textarea>
+
+            <button type="submit">Submit</button>
+
+            result
+            <input type="text" value={{final}}> {% endcomment %}
+            
+        </form>
+    </main>
+    {% include "fotter.html" %}
+</body>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Submit Your Details</h1>
+        {% include "header.html" %}
+    </header>
+    <main>
+        <h2 style="text-align: center;">Calculator</h2>
+        <form action="#" method="POST">
+            {% csrf_token %}
+            <label for="">Value1:</label>
+            <input type="text"  name="value1" required placeholder = "Enter your a value">
+
+            <select name = 'cal'>
+                <option value = "+"> + </option>
+                <option value = "-"> - </option>
+                <option value = "*"> * </option>
+                <option value = "/"> / </option>
+            </select>
+            <label for="">Value2:</label>
+            <input type="text"  name="value2" required placeholder = "Enter your a value">
+
+            <button type="submit">calculate</button>
+
+            <label for="">Result</label>
+            <input type="text" value={{final}}>
+
+
+        </form>
+    </main>
+    {% include "fotter.html" %}
+</body>
+</body>
+</html>
