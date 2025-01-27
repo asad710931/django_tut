@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <a href="form.html">Form</a>
+        </nav>
+    </header>
+    <section class="features">
+        {% for i in serviceData %}
+        <div class="feature">
+            <div class="icon"><span class= {{i.service_icon}} ></span></div>
+            <h3>{{i.service_title }}</h3>
+            <p>{{i.service_das| upper| safe}}</p>
+        </div>
+        {% endfor %}
+        {% comment %} <div class="feature">
+            <div class="icon"><span class="lnr lnr-license"></span></div>
+            <h3>Professional Service</h3>
+            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+        </div>
+        <div class="feature">
+            <div class="icon"><span class="lnr lnr-rocket"></span></div>
+            <h3>Technical Skills</h3>
+            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+        </div>
+        <div class="feature">
+            <div class="icon"><span class="lnr lnr-thumbs-up"></span></div>
+            <h3>Highly Recommended</h3>
+            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+        </div> {% endcomment %}
+    </section>
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
